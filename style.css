@@ -1,0 +1,212 @@
+
+/* =====================================
+   AI WRITING ASSISTANT - PREMIUM UI
+   ===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #090b16;
+    --panel: #111528;
+    --panel-light: #191e35;
+    --purple: #8b5cf6;
+    --blue: #5685ff;
+    --text: #f4f3ff;
+    --muted: #9da5c0;
+    --border: rgba(255,255,255,0.09);
+}
+
+/* Main background */
+
+.stApp {
+    background:
+        radial-gradient(ellipse at 15% 0%, rgba(107,65,220,0.19), transparent 35%),
+        radial-gradient(ellipse at 90% 30%, rgba(48,106,230,0.13), transparent 35%),
+        var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Hide Streamlit branding */
+
+#MainMenu,
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* Main content */
+
+.block-container {
+    max-width: 1250px;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: var(--text) !important;
+    letter-spacing: -0.7px;
+}
+
+p, label, span {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Sidebar */
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #111426 0%,
+        #0d1020 100%
+    );
+    border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] h2 {
+    font-size: 1.25rem;
+    color: #c4b5fd !important;
+}
+
+/* Text input and text area */
+
+.stTextInput input,
+.stTextArea textarea {
+    background: #171b30 !important;
+    color: white !important;
+    border: 1px solid #303754 !important;
+    border-radius: 12px !important;
+    padding: 13px !important;
+    transition: all 0.25s ease;
+}
+
+.stTextArea textarea {
+    min-height: 150px;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--purple) !important;
+    box-shadow: 0 0 0 3px rgba(139,92,246,0.17) !important;
+}
+
+/* Select boxes */
+
+div[data-baseweb="select"] > div {
+    background: #171b30 !important;
+    border: 1px solid #303754 !important;
+    border-radius: 11px !important;
+    color: white !important;
+}
+
+div[data-baseweb="select"] span {
+    color: white !important;
+}
+
+/* Slider */
+
+.stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: var(--purple) !important;
+    border-color: var(--purple) !important;
+}
+
+/* Buttons */
+
+.stButton > button,
+.stDownloadButton > button {
+    background: linear-gradient(
+        110deg,
+        #7654ec,
+        #477df4
+    ) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 700 !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 5px 20px rgba(111,83,236,0.22);
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(111,83,236,0.4);
+    border: none !important;
+}
+
+/* Cards and containers */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(21,25,45,0.75);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+/* Divider */
+
+hr {
+    border-color: var(--border) !important;
+}
+
+/* Success, warning and error messages */
+
+div[data-testid="stAlert"] {
+    border-radius: 13px;
+    border: 1px solid var(--border);
+}
+
+/* Generated content */
+
+div[data-testid="stMarkdownContainer"] {
+    line-height: 1.8;
+}
+
+div[data-testid="stMarkdownContainer"] h1,
+div[data-testid="stMarkdownContainer"] h2,
+div[data-testid="stMarkdownContainer"] h3 {
+    color: #c4b5fd !important;
+}
+
+/* Labels */
+
+.stTextInput label,
+.stTextArea label,
+.stSelectbox label,
+.stSlider label {
+    color: #c7cbe0 !important;
+    font-weight: 600;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090b16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #51418a;
+    border-radius: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1.2rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+}
